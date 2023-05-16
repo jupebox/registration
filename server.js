@@ -12,8 +12,12 @@ const server = http.createServer((req, res) => {
             res.end('File not found!');
             return;
         }
-
-        res.writeHead(200, { 'Content-Type': 'text/html' });
+        const pathParts = filePath.split('.');
+        let contentType = 'text/html';
+        if (pathParts.reverse()[0].toLowerCase() === 'css') {
+            contentType = 'text/css';
+        }
+        res.writeHead(200, { 'Content-Type': contentType });
         res.end(content);
     });
 });
