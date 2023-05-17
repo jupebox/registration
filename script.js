@@ -139,10 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         const formGroup = input.parentElement;
-        const errorMessage = document.createElement('label');
+        const errorMessage = document.createElement('p');
         errorMessage.className = 'form__message form__message--error';
         errorMessage.innerText = message;
         errorMessage.setAttribute('for', input.id);
+        errorMessage.id = `${input.id}-message`;
         formGroup.appendChild(errorMessage);
         input.classList.add('form__input--error');
     };
@@ -150,7 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearErrorMessage = (input) => {
         if (input.classList.contains('form__input--error')) {
             input.classList.remove('form__input--error');
-            input.parentElement.removeChild(document.querySelector('.form__message--error'));
+            const children = Array.prototype.slice.call(input.parentElement.children);
+            children.forEach((child) => {
+                if (child.classList.contains('form__message--error')) {
+                    input.parentElement.removeChild(child);
+                }
+            });
         }
     };
 
