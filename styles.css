@@ -4,7 +4,7 @@
     --color-success: #4CAF50;
     --color-success-dark: #268356;
     --color-error: red;
-    --color-overlay: rgba(255, 255, 255, .75);
+    --color-overlay: rgba(255 255 255 / 75%);
     --animation-duration: 0.2s;
     --spacing-1: 5px;
     --spacing-2: 10px;
@@ -18,11 +18,13 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .heading {
     padding: 0;
     margin: 0 0 var(--spacing-2);
     font-size: 1.75em;
 }
+
 .content {
     max-width: 500px;
     width: 90%;
@@ -31,8 +33,9 @@ body {
     display: grid;
     align-content: start;
     margin: 0 auto;
-    height: calc(100vg - var(--spacing-3) - var(--spacing-3));
+    height: calc(100vh - var(--spacing-3) - var(--spacing-3));
 }
+
 .form {
     padding: var(--spacing-3);
     background-color: #fff;
@@ -53,45 +56,50 @@ body {
     z-index: 1;
     background: var(--color-overlay);
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    inset: 0;
     margin: 0;
     font-size: 18px;
 }
+
 .spinner__dot {
     display: inline-block;
     animation: 2s ease-in 0s infinite bounce;
     font-weight: bold;
     padding-left: 1px;
 }
+
 .spinner__dot:nth-child(1) {
     animation-delay: 0.2s;
 }
+
 .spinner__dot:nth-child(2) {
     animation-delay: 0.4s;
 }
+
 .spinner__dot:nth-child(3) {
     animation-delay: 0.6s;
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0%);
-  }
-  10% {
-    transform: translateY(-20%);
-  }
-  18% {
-    transform: translateY(8%);
-  }
-  20% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
+    0% {
+        transform: translateY(0%);
+    }
+
+    10% {
+        transform: translateY(-20%);
+    }
+
+    18% {
+        transform: translateY(8%);
+    }
+
+    20% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 .form--submitted {
@@ -150,13 +158,11 @@ body {
 
 .dialog__overlay {
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: var(--color-overlay);
     display: none;
 }
+
 .dialog__overlay--visible {
     display: block;
 }
@@ -183,14 +189,17 @@ body {
         width: 80%;
         max-width: 760px;
     }
+
     .form__group {
         grid-template-columns: 1fr 2fr;
         column-gap: var(--spacing-3);
         align-items: center;
     }
+
     .form__label {
         text-align: right;
     }
+
     .form__button,
     .form__message {
         grid-column-start: 2;
