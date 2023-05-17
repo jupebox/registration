@@ -40,7 +40,7 @@ You should perform the following tasks:
 - Code Quality: The code should be well-structured, maintainable, and follow best practices for HTML, CSS3, Node.js, and ES6.
 - Style: It doesn't have to follow any strict design, other than what's mentioned in item 2a above, but at least make it look good on all screen sizes. If need be, make layout adjustments for different screen sizes.
 - Bug Fixes: All the initial bugs should be identified and fixed.
-- Functional: All objectives should be completed for submitting the form, showing the 'Thank You message', passing all tests and linting with `npm run test`
+- Functional: All objectives should be completed for submitting the form, showing the 'Thank You message', passing all tests and linting with `npm run lint`
 - UI/UX: The form should be visually appealing and have a user-friendly design.
 
 Good luck, and we look forward to reviewing your submission!
