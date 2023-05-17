@@ -13,9 +13,16 @@ const server = http.createServer((req, res) => {
             return;
         }
         const pathParts = filePath.split('.');
-        let contentType = 'text/html';
-        if (pathParts.reverse()[0].toLowerCase() === 'css') {
-            contentType = 'text/css';
+        let contentType;
+        switch (pathParts.reverse()[0].toLowerCase()) {
+            case 'css':
+                contentType = 'text/css';
+                break;
+            case 'js':
+                contentType = 'text/javscript';
+                break;
+            default:
+                contentType = 'text/html';
         }
         res.writeHead(200, { 'Content-Type': contentType });
         res.end(content);

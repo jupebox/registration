@@ -4,43 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>User Registration Form</title>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/png" href="https://formbold.com/favicon.png">
 </head>
 <body>
   <main class="content">
     <h1 class="heading">Register</h1>
-    <form id="registration-form" method="post" class="form" post="https://formbold.com/s/3GqGp">
-      <div class="form__group">
-        <label class="form__label" for="name">Name:</label>
-        <input class="form__input" type="text" id="name" name="name" required placeholder="Robin" pattern="[A-Za-z]" aria-describedby="name-message">
+    <form id="registration-form" method="post" class="form" action="https://formbold.com/s/3GqGp">
+      <div class="form-group">
+        <label class="form-label" for="name">Name:</label>
+        <input class="form-input" type="text" id="name" name="name" required placeholder="Robin Hood">
       </div>
-      <div class="form__group">
-        <label class="form__label" for="email">Email:</label>
-        <input class="form__input" type="email" id="email" name="email" required placeholder="name@domain.com" aria-describedby="email-message">
+      <div class="form-group">
+        <label class="form-label" for="email">Email:</label>
+        <input class="form-input" type="email" id="email" name="email" required placeholder="name@domain.com">
       </div>
-      <div class="form__group">
-        <label class="form__label" for="password">Password:</label>
-        <input class="form__input" type="password" id="password" name="password" required placeholder="8 characters minimum" aria-describedby="password-message">
+      <div class="form-group">
+        <label class="form-label" for="password">Password:</label>
+        <input class="form-input" type="password" id="password" name="password" required placeholder="8 characters minimum">
       </div>
-      <div class="form__group">
-        <label class="form__label" for="confirm-password">Confirm Password:</label>
-        <input class="form__input" type="password" id="confirm-password" name="confirm-password" required aria-describedby="confirm-password-message">
+      <div class="form-group">
+        <label class="form-label" for="confirm-password">Confirm Password:</label>
+        <input class="form-input" type="password" id="confirm-password" name="confirm-password" required>
       </div>
-      <div class="form__group">
-        <button class="button form__button" type="submit">Submit</button>
+      <div class="form-group">
+        <button class="button form-button" type="submit">Submit</button>
       </div>
     </form>
-    <div class="spinner"><p>Please wait<span class="spinner__dot">.</span><span class="spinner__dot">.</span><span class="spinner__dot">.</span></p></div>
-    <div class="dialog__overlay"></div>
+    <div class="spinner"><p>Please wait<span class="spinner-dot">.</span><span class="spinner-dot">.</span><span class="spinner-dot">.</span></p></div>
+    <div class="dialog-overlay"></div>
     <dialog id="error-dialog" class="dialog">
-      <h2 class="dialog__heading heading">Uh oh, something went wrong</h2>
-      <p class="dialog__text"></p>
-      <button class="button dialog__button" id="close-error-dialog-button">Close</button>
+      <h2 class="dialog-heading heading">Uh oh, something went wrong</h2>
+      <p class="dialog-text"></p>
+      <button class="button dialog-button" id="close-error-dialog-button">Close</button>
     </dialog>
     <dialog id="success-dialog" class="dialog">
-      <h2 class="dialog__heading heading">You have been registered</h2>
-      <p class="dialog__text">Check your email for a confirmation link.</p>
-      <button class="button dialog__button" id="close-success-dialog-button">Ok!</button>
+      <h2 class="dialog-heading heading">You have been registered</h2>
+      <p class="dialog-text">Check your email for a confirmation link.</p>
+      <button class="button dialog-button" id="close-success-dialog-button">Ok!</button>
     </dialog>
   </main>
   <script src="script.js"></script>
